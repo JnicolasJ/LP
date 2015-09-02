@@ -18,10 +18,13 @@ int lex();
 #define LETTER 0
 #define DIGIT 1
 #define UNKNOWN 99
+#define punto_decimal 4
 
 //token
 #define INT_LIT 10
+
 #define IDENT 11
+#define FLOAT 12
 #define ASSIGN_OP 20
 #define ADD_OP 21
 #define SUB_OP 22
@@ -107,9 +110,13 @@ void getChar()
     {
         if (isalpha(nextChar))
              charClass = LETTER;
-        else if (isdigit(nextChar))
-            charClass = DIGIT;
+        else {
+            if (isdigit(nextChar))
+                charClass = DIGIT;
+            if (nextChar == '.')
+                charClass = punto_decimal;
             else charClass = UNKNOWN;
+        }
     }
     else
         charClass = EOF;
@@ -144,10 +151,14 @@ int lex()
     case DIGIT:
         addChar();
         getChar();
-        while (charClass == DIGIT)
+        while (charClass == DIGIT  || charClass== punto_decimal)
         {
             addChar();
             getChar();
+            if(charClass == punto_decimal)
+            {
+                nextToken = FLOAT;
+            }
         }
         nextToken = INT_LIT;
         break;
