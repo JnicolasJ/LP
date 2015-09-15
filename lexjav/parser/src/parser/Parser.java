@@ -128,7 +128,9 @@ public class Parser {
                     cade.append("EOF");
                     
         }
-        System.out.printf("Next token is: %s, Next lexeme is %s\n", nexT, cade);
+        String new_cade = cade.toString();
+        System.out.printf("Next token is: " + nexT + ", Next lexeme is " + cade + "\n");
+        
    }
 
 
@@ -140,7 +142,7 @@ public class Parser {
     }
     
     void addChar() {
-        cade.append(caracter);
+        cade.append(next_caracter);
     }
     
     
