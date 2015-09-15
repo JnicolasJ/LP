@@ -14,10 +14,23 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-enum CharClass
-{
-    letter(1), digit(2), floa(3), unknow(4),invalid(5);
+enum CharClass{
+    LETTER,
+    DIGIT,
+    FLO_DIGIT,
+    UNKNOW,
+    INVALID;
+    
+    private final int op;
+    
+    CharClass(int x){
+        this.op = x;
+    }
+    
+    
+    
 }
+
 public class Parser {
 
     /**
