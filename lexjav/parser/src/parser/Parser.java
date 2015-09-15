@@ -58,12 +58,13 @@ public class Parser {
             caracter_extraido = file.read();
         } catch (Exception e) {
             Car = CharClass.EOF;
+          //  System.out.println("basura");
             System.out.println(e.getMessage());
             return;
         }
-        
-        
+       
         next_caracter = (char) caracter_extraido;
+     //   System.out.print(next_caracter);
         if (caracter_extraido == -1) {
             Car = CharClass.EOF;
             return;
@@ -182,7 +183,7 @@ public class Parser {
     FileReader file_name = null;
         // TODO code application logic here
         try{
-            file_name = new FileReader (new  File("front.in"));
+            file_name = new FileReader ("front.in");
         }
         catch(Exception e){
             System.out.println ("error");
