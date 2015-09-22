@@ -26,7 +26,7 @@ void factor();
 
 #define UNKNOWN 99
 #define INVALID 100
-
+#define ERROR 50
 #define INT_LIT 10
 #define IDENT 12
 #define FLOAT_LIT 13
@@ -106,8 +106,10 @@ void getChar() {
 	if ((nextChar = getc(in_fp)) != EOF) {
 		if (isalpha(nextChar))
 			charClass = LETTER;
-		else if (isdigit(nextChar))
-			charClass = DIGIT;
+		else if (isdigit(nextChar)){
+			charClass = DIGIT;}
+
+
 		else if(nextChar == '.')
 			charClass = FLOAT;
 		else
@@ -134,6 +136,7 @@ int lex() {
 			while (charClass == LETTER || charClass == DIGIT) {
 				addChar();
 				getChar();
+
 			}
  			nextToken = IDENT;
  			break;
@@ -141,13 +144,17 @@ int lex() {
  		case DIGIT:
 			addChar();
 			getChar();
-			nextToken = INT_LIT;
-			while (charClass == DIGIT || charClass ==  FLOAT) {
+			//nextToken = INT_LIT;
+			while (charClass == DIGIT || charClass ==  FLOAT || charClass == LETTER) {
  				addChar();
  				getChar();
  				if (charClass == FLOAT){
  					nextToken = FLOAT_LIT;
  				}
+
+ 				if(charClass == LETTER){
+                    nextToken = ERROR;
+                }
  			}
 			break;
 /* Parentheses and operators */
@@ -156,6 +163,8 @@ int lex() {
  			getChar();
  			break;
 /* EOF */
+
+
  		case EOF:
 			nextToken = EOF;
  			lexeme[0] = 'E';
@@ -164,6 +173,9 @@ int lex() {
 			lexeme[3] = 0;
  			break;
  	} /* End of switch */
+
+    if(nextToken == ERROR)
+        cout<<"lex invalido "<<lexeme<<endl;
 	printf("Next token is: %d, Next lexeme is %s\n",
 		nextToken, lexeme);
 	return nextToken;
@@ -178,7 +190,7 @@ void factor()
 {
     printf("Enter <factor>\n");
     /* Determine which RHS */
-    if (nextToken == IDENT || nextToken == INT_LIT || nextToken == FLOAT_LIT)
+    if (nextToken == IDENT || nextToken == INT_LIT || nextToken == FLOAT_LIT || nextToken == ERROR)
     /* Get the next token */
     lex();
     /* If the RHS is ( <expr>), call lex to pass over the
