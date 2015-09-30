@@ -16,6 +16,10 @@ void getChar();
 void getNonBlank();
 int lex();
 
+void term();
+void expr();
+void factor();
+
 #define LETTER 0
 #define DIGIT 1
 #define FLOAT 2
@@ -119,7 +123,7 @@ void getNonBlank() {
 /* lex - a simple lexical analyzer for arithmetic
  expressions */
 int lex() {
-
+	lexLen = 0;
 	getNonBlank();
 	switch (charClass) {
 		/* Parse identifiers */
@@ -137,20 +141,12 @@ int lex() {
 			addChar();
 			getChar();
 			nextToken = INT_LIT;
-
 			while (charClass == DIGIT || charClass ==  FLOAT) {
  				addChar();
  				getChar();
- 				if(charClass == LETTER){
-                    nextToken = INVALID;
-                    cout<<"invalid synta"<<endl;
- 				}
  				if (charClass == FLOAT){
  					nextToken = FLOAT_LIT;
- 					//cout<<"sasas"<<endl;
  				}
-
-
  			}
 			break;
 /* Parentheses and operators */
