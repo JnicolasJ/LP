@@ -42,7 +42,7 @@ void factor();
 using namespace std;
 main() {
 /* Open the input data file and process its contents */
-	if ((in_fp = fopen("front.in", "r")) == NULL)
+	if ((in_fp = fopen("front.txt", "r")) == NULL)
  		printf("ERROR - cannot open front.in \n");
  	else {
  		getChar();
@@ -152,9 +152,11 @@ int lex() {
  					nextToken = FLOAT_LIT;
  				}
 
- 				if(charClass == LETTER){
+ 				 if(charClass == LETTER)
                     nextToken = ERROR;
-                }
+
+
+
  			}
 			break;
 /* Parentheses and operators */
