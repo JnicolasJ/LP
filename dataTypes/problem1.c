@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//que clase de tipos primitivos se pueden mezclar
 int main (int argc, char * argv[]) {
 
      int x = 5;
