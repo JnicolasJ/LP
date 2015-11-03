@@ -23,6 +23,11 @@ int main (int argc, char * argv[]) {
  
 	printf("el valor de b = %f\nel valor de a = %lf", b, a);
 	printf("\n");       
+
+    char aa = 'h';
+    int da = 10 + a;
+    printf("sumar tipos distintos %d",da);
+    printf("\n"); 
      return 0;
 
 } 
