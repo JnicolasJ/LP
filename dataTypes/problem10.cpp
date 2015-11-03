@@ -17,3 +17,11 @@ int main()
 	cout<<"valor de  x: "<<x<<endl;
 	return 0;
 }
+
+/*
+En el caso de las asignaciones, cuando la conversión no implica pérdida de precisión, 
+se aplican las mismas reglas que para los operandos, estas conversiones se conocen también
+ como promoción de tipos. Cuando hay pérdida de precisión, las conversiones se conocen como democión 
+ de tipos. El compilador normalmente emite un aviso o warning,
+ cuando se hace una democión implícita, es decir cuando hay una democión automática.
+*/
