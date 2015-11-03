@@ -4,30 +4,39 @@
 
 using namespace std;
 
-int ar[50];
+int ar[50][50];
 void llenar()
 {
 	for(int i=0;i<50;i++)
-		ar[i]=1;
+	{
+		for(int j=0;j<50;j++)
+		ar[i][j]=1;
+	}
 }
 
 void funcion()
 {
 	
 	for(int i=0;i<50;i++)
-		ar[i]=0;	
+	{
+		for(int j=0;j<50;j++)
+		ar[i][j];
+	}
 }
 
 void funcion2()
 {
 
-	for(int* puntero = &ar[0];puntero != &ar[50];puntero++)
-		(*puntero)=0;
+	for(int i=0;i<50;i++)
+	{
+		for(int j=0;j<50;j++)
+		*(ar+i+j);
+	}
 }
 
 int main(int argc, char const *argv[])
 {
-	llenar();
+	//llenar();
 	float ini = clock();
 	for(int i=0; i<100000;i++)
 	{
@@ -38,7 +47,7 @@ int main(int argc, char const *argv[])
 
 	cout<<"tiempo de la primera funcion"<<(end - ini) / ((double)CLOCKS_PER_SEC)<<endl;
 
-	llenar();
+	//llenar();
 	float ini1 = clock();
 	for(int i=0; i<100000;i++)
 	{
