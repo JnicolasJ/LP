@@ -21,6 +21,9 @@ int main ()
 	cout<<"color = "<<color<<endl;
 	cout<<color * 2<<endl;
 
+	int tmp = (int)color + 6;
+	cout<<"nuevo-> "<<tmp<<endl;
+
 	return 0;
 }
 
