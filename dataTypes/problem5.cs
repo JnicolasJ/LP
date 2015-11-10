@@ -23,7 +23,7 @@ class Program
 	
 	Importance value = Importance.Critical;
 
-	
+	Console.WriteLine("prueba valor ++ " + value++);
 	if (value == Importance.Trivial)
 	{
 	    Console.WriteLine("Not true");
