@@ -13,6 +13,18 @@ public class problem10{
 		System.out.println(" valor de b es: " + b);
 		System.out.println(" valor de a es: " + a);
 		System.out.println(" valor de x es: " + x);
+		int = long;
+		//float b
+		//double b
+		//int b
+		/*
+	int a  = b//float 
+	int  a= b//double;
+	char  a= b//int; 
+	float a = b//double; 
+	short a= b//double;
+	short  = b//int*/
+
 	}
 }
 
