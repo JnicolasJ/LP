@@ -28,6 +28,15 @@ int main (int argc, char * argv[]) {
     int da = 10 + a;
     printf("sumar tipos distintos %d",da);
     printf("\n"); 
+
+    //  tipos punteros no son compatibles depende al tipo establecido
+/*
+
+    int tmp[10];
+    int * ptr ; tmp;
+    char* pt;
+    pt =  ptr;
+    */ 
      return 0;
 
 } 
