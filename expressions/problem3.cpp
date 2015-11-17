@@ -47,6 +47,16 @@ int main()
 
 	cout<< (true && true || false) <<endl;
 	// resultado verdadero por existit el or
+/*
+ 1.- Paréntesis
 
+2.- Potencias y raíces
+
+3.- Multiplicaciones y divisiones
+
+4.- Sumas y restas
+
+5.- Dos o más de la misma jerarquía u orden, entonces resolver de izquierda a derecha 
+*/
 	return 0;
 }
