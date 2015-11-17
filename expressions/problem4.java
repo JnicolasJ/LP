@@ -21,11 +21,17 @@ public class problem4{
 		
 
 
-		System.out.println(" asociatividad por la izquierda");
 		a = 10;
 		sum1 = fun2(a) + fun(a);
 	
 		System.out.println(" valor de fun es: " + sum1);
+
+		int b = a +fun(a);
+		System.out.println(" valor  es: " + b);		
+
+		b = fun(a)+ a;
+		System.out.println(" valor  es: " + b);		
+
 		
 		
 	}
