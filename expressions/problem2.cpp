@@ -9,7 +9,8 @@ int fun(int *k) {
 return 3 * (*k) - 1;
 }
 
-//funcion paso por valor
+//funcion preferencia
+
 
 int main()
 {
@@ -25,3 +26,5 @@ int main()
 	printf("sum2 %i\n",sum2);
 	return 0;
 }
+
+/*al igual que el lenguaje c la expresion se evalua de izquierda a derecha*/

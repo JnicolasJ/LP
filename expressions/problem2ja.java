@@ -5,7 +5,7 @@ public class problem2ja{
 		k += 4;
 		return 3 * k - 1;
 	}
-// no hya punteros en java
+// no hay parametro por referencia  en java
 	public static void main(String[] args)
 	{
 		int i = 10, j = 10, sum1, sum2;
@@ -20,3 +20,15 @@ public class problem2ja{
 		
 	}
 }
+/*
+Paso por valor significa que cuando un argumento se pasa a una función, 
+la función recibe una copia del valor original. Por lo tanto, si la función modifica el parámetro
+, sólo la copia cambia y el valor original permanece intacto.
+
+Paso por referencia significa que cuando un argumento se pasa a una función,
+ la función recibe la dirección de memoria del valor original, no la copia del valor. 
+ Por lo tanto, si la función modifica el parámetro, el valor original en el código que llamó a la función cambia.
+*/
+
+ //Java hace paso parametros por valor solo manda la copia de la referencia
+ //UNa solucion seria crear un objeto que contenga el metodo obtenerDato para asi poder modificarlo 

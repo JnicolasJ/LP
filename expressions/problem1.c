@@ -5,7 +5,7 @@ int fun(int *k) {
 return 3 * (*k) - 1;
 }
 
-//funcion paso por valor
+//paso por referencia
 
 int main(int argc, char const *argv[])
 {
@@ -15,9 +15,12 @@ int main(int argc, char const *argv[])
 	//total 46
 	
 	sum2 = fun(&j) + (j / 2);
-	//esto es diferente ya que primero esta haciendo la modificacion a j = 14 y luego al realizar fun obtenemos 41 + 14/2 = 48
+	//esto es diferente ya que primero esta haciendo la modificacion a j = 14 y 
+	//luego al realizar fun obtenemos 41 + 14/2 = 48
 	printf("sum %i\n",sum1);
 
 	printf("sum2 %i\n",sum2);
 	return 0;
 }
+
+/*La ejecucion de la expresion se da de izquierda a derecha y no ejecutanto primero la funcion por prioridad*/
