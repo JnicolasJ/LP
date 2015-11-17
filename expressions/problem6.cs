@@ -29,7 +29,14 @@ class Program
         
         sum1 = fun2(a) + fun(a);
         System.Console.WriteLine("sum1: {0}", sum1);
-        
+
+/*
+        int b = a + fun(a);
+        System.Console.WriteLine("b->: {0}", b);        
+
+        b = fun(a) + a;
+        System.Console.WriteLine("b->: {0}", b);                
+*/        
     }
 }
 
