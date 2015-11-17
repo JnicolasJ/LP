@@ -22,6 +22,11 @@ int main()
 
 	sum1 = fun2(a) + fun(a);
 	cout<<"valor es: "<<sum1<<endl;
+
+	int b = a + fun(a);
+	cout<<"valor es: "<<b<<endl;	
+	b = fun(a) + b;
+	cout<<"valor es: "<<b<<endl;	
 	return 0;
 }
 
