@@ -26,6 +26,6 @@ int main(int argc, char const *argv[])
 }
 
 /*El resultado para ambos casos es de 40
-llamada a la funcion esta al mismo nivel de una operacion[la evaluacion de izquierda a derecha 
-es la misma que la viceverza]
+LO que demuestra que se esta operando de izquierda a derecha
+y de derecha a izquierda
 */
