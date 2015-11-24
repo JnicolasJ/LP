@@ -1,0 +1,4 @@
+
+(define (potencia A B)
+(expt A B))
+
