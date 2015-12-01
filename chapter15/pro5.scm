@@ -1,0 +1,6 @@
+(define (zeroes lst)
+  (let loop ((lst lst)
+             (count 0))
+    (cond ((null? lst) count)
+          ((zero? (car lst)) (loop (cdr lst) (+ count 1)))
+          (else (loop (cdr lst) count)))))
