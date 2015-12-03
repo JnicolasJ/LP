@@ -1,0 +1,6 @@
+(define (revers lista)
+(if (null? lista)
+'()
+(append (revers (cdr lista)) (list (car lista)))
+)
+)

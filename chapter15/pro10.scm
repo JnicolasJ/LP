@@ -1,0 +1,11 @@
+(define (buscar-ree lista a b)
+(if (null? lista)
+'vacio
+(let ((r (buscar-ree (cdr lista) a b)) (h (car lista)))
+(if (list? h)
+(cons (buscar-ree h a b) r)
+(cons (if (eqv? h a) b h) r)
+)
+)
+)
+)

@@ -1,0 +1,10 @@
+(define (eliminar lista x)
+(if (null? lista) '()
+(let ((t (eliminar (cdr lista) x)) (h (car lista)))
+(if (eqv? h x)
+t
+(cons h t)
+)
+)
+)
+)
